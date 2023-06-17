@@ -1,0 +1,134 @@
+.np-video {
+    padding: 100px 0 30px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 35%;
+        height: calc(100% - 160px);
+        background-color: #F5F5F5;
+    }
+    // .np-video__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
+    // .np-video__elems
+
+    &__elems {
+        width: 55%;
+        margin-right: 70px;
+        border: 1px solid #DBDBDB;
+
+    }
+
+    // .np-video__elem
+
+    &__elem {
+        border-bottom: 1px solid #DBDBDB;
+        padding: 30px 30px 30px 80px;
+        box-sizing: border-box;
+        width: 100%;
+        display: block;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            width: 30px;
+            height: 30px;
+            background-image: url(assets/imgs/icons/for-video-block.png);
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        p {
+            display: block;
+            font-weight: 400;
+            font-size: 16px;
+            color: #333333;
+            margin: 0;
+            line-height: 1.3;
+        }
+    }
+
+    // .np-video__video
+
+    &__video {
+        position: absolute;
+        right: 150px;
+        top: calc(50% - 360px);
+        height: 360px;
+        width: 640px;
+        top: calc(50% - 200px);
+    }
+}
+
+@media(max-width:1800px) {
+    .np-video {
+        &__video {
+            right: 15px;
+            width: 35%;
+            height: 25vw;
+            iframe {
+                
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .np-video {
+        &::before {
+            height: 50%;
+        }
+        &__video {
+            right: 15px;
+            width: 35%;
+            height: 25vw;
+            iframe {
+                
+            }
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .np-video {
+        &::before {
+            display: none;
+        }
+        &__video {
+            position: static;
+            height: 420px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__body {
+            flex-direction: column-reverse;
+        }
+        &__elems {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+@media(max-width:560px) {
+    .np-video {
+        padding: 70px 0 20px;
+       &__video {
+        width: 100vw;
+        height: 200px;
+       }
+    }
+}
