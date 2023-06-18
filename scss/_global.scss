@@ -92,6 +92,18 @@ $red: rgba(250, 73, 81, 1);
     width: 100%;
 }
 
+.np-btn{
+    padding: 12px 30px;
+    box-sizing: border-box;
+    background-color: $red;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
 .np-bread {
     padding: 60px 0;
     display: flex;
