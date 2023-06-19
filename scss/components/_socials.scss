@@ -1,0 +1,123 @@
+.np-socials {
+    padding: 30px 0 40px;
+    background-image: url(assets/imgs/soc-back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: $font;
+    // .np-socials__wrap
+    color: #fff;
+    a {
+        color: #fff;
+        
+    }
+    &__wrap {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: stretch;
+    }
+
+    // .np-socials__text
+
+    &__text {
+        width: 50%;
+        margin-right: 30px;
+        p {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 1.3;
+            color: #f1f1f1;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                margin: 0;
+                padding-left: 40px;
+                box-sizing: border-box;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    width: 22px;
+                    height: 20px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                &.you-ico {
+                    &::before {
+                        background-image: url(assets/imgs/icons/yout.svg);
+                    }
+                }
+                &.vk-ico {
+                    &::before {
+                        background-image: url(assets/imgs/icons/vk.svg);
+                    }
+                }
+                &.inst-ico {
+                    &::before {
+                        background-image: url(assets/imgs/icons/inst.svg);
+                    }
+                }
+                &.face-ico {
+                    &::before {
+                        background-image: url(assets/imgs/icons/face.svg);
+                    }
+                }
+                &.ok-ico {
+                    &::before {
+                        background-image: url(assets/imgs/icons/ok.svg);
+                    }
+                }
+                
+            }
+        }
+    }
+    &__video {
+        width: 50%;
+        height: auto;
+        iframe {
+            height: 100%;
+        }
+    }
+}
+
+@media(max-width:920px) {
+    .np-socials {
+        &__wrap{
+            flex-direction: column-reverse;
+            padding: 0 90px;
+        }
+        &__video {
+            height: 320px;
+            width: 100%;
+            margin: 0 0 30px;
+        }
+        &__text {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+@media(max-width:650px) {
+    .np-socials {
+        padding: 40px 0 20px;
+        &__wrap {
+            padding: 0;
+        }
+        &__video {
+            height: 190px;
+        }
+        &__text {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}

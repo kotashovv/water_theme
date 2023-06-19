@@ -1,0 +1,126 @@
+.np-gallery {
+    padding: 150px 0 100px;
+    font-family: $font;
+    // .np-gallery__title
+    .np-container {
+        max-width: none;
+    }
+    &__parent {
+        max-width: 1710px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+    &__title {
+        max-width: 1500px;
+        margin: 0 auto;
+        margin-bottom: 70px;
+        h4 {
+            display: block;
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.3;
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+
+    // .np-gallery__slider
+
+    &__slider {
+        max-width: 1500px;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+    }
+
+    // .np-gallery__nav
+
+    &__nav {
+        .swiper-pagination {
+            display: none;
+        }
+        button {
+            position: absolute;
+            box-sizing: border-box;
+            padding: 5px;
+            border: none;
+            background-color: transparent;
+            img {
+                display: block;
+                max-width: 100%;
+            }
+            &.gallery-prev {
+                left: 0;
+                top: calc(50% - 5px);
+            }
+            &.gallery-next {
+                right: 0;
+                transform: rotate(180deg);
+                top: calc(50% - 5px);
+            }
+        }
+    }
+
+    // .np-gallery__slider-wrap
+
+    &__slider-wrap {
+
+    }
+
+    // .np-gallery__slide
+
+    &__slide {
+        img {
+            max-width: 100%;
+            display: block;
+        }
+    }
+}
+
+
+@media(max-width:920px) {
+    .np-gallery {
+        padding: 50px 0 25px;
+        
+        &__title {
+            margin-bottom: 30px;
+            h4 {
+                font-size: 23px;
+                margin: 0;
+            text-align: left;
+            }
+        }
+        &__parent {
+            padding: 0;
+        }
+        &__nav {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                &.gallery-prev, &.gallery-next{
+                    position: static;
+                }
+            }
+            .swiper-pagination {
+                display: block;
+                width: fit-content;
+                margin: 0 25px;
+                position: static;
+                .swiper-pagination-bullet {
+                    width: 5px;
+                    height: 5px;
+                    background-color: #000;
+                    opacity: .3;
+                    transition: .35s ease;
+                    &.swiper-pagination-bullet-active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

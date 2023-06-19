@@ -1,3 +1,11 @@
+<?php
+/*
+Template Name: Замена насоса
+Template Post Type: page
+*/?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

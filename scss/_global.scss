@@ -101,7 +101,11 @@ $red: rgba(250, 73, 81, 1);
     text-align: center;
     font-size: 14px;
     line-height: 1.2;
+    display: block;
     text-decoration: none;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
 }
 
 .np-bread {

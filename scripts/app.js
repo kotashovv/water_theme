@@ -47,4 +47,60 @@ document.addEventListener('DOMContentLoaded', ()=>{
             },
         }
     })
+
+    const gallerySlider = new Swiper('.np-gallery__slider', {
+        pagination: {
+            el: '.np-gallery__pagination',
+        },
+        navigation:{
+            prevEl: '.gallery-prev',
+            nextEl: '.gallery-next'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            450: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            920: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            }
+        }
+        
+    })
+
+
+    const faqBtns = document.querySelectorAll('.np-faq__btn');
+    if (faqBtns.length > 0) {
+        
+        faqBtns.forEach(item=>{
+            item.addEventListener('click', (e)=>{
+                const textInFaq = document.querySelectorAll('.np-faq__text');
+                if (!e.target.classList.contains('active')) {
+                    textInFaq.forEach(function(item){
+                        item.classList.remove('active');
+                    })
+                    faqBtns.forEach(item=>{
+                        item.classList.remove('active');
+                    })
+                    item.classList.add('active');
+                    item.nextElementSibling.classList.add('active');
+                    
+                } else {
+                    textInFaq.forEach(function(item){
+                        item.classList.remove('active');
+                    })
+                    faqBtns.forEach(item=>{
+                        item.classList.remove('active');
+                    })
+                }
+                
+                
+            })
+        })
+    }
 })
