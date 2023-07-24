@@ -103,4 +103,28 @@ document.addEventListener('DOMContentLoaded', ()=>{
             })
         })
     }
+
+    /* обновление --------- */
+    
+
+    const priceToggle = document.querySelectorAll('.np-prices__toggles-btn')
+    if (priceToggle.length != 0) {
+        const priceTable = document.querySelectorAll('.np-prices__table')
+
+        function nullActive() {
+            priceToggle.forEach((item)=>{
+                item.classList.remove('active');
+            })
+            priceTable.forEach((item)=>{
+                item.classList.remove('active');
+            })
+        }
+        priceToggle.forEach(function(item, index){
+            item.addEventListener('click', (e)=>{
+                nullActive();
+                item.classList.add('active');
+                priceTable[index].classList.add('active');
+            })
+        })
+    }
 })
