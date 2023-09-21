@@ -5256,6 +5256,17 @@ template {
   padding: 50px 0;
   display: block;
   background-color: #f1f1f1;
+  position: relative;
+}
+
+.vn-kesson3::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  background-color: #fa4951;
 }
 
 .vn-kesson3__body {
@@ -5265,9 +5276,9 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .vn-kesson3__text {
@@ -5275,8 +5286,106 @@ template {
   max-width: 600px;
 }
 
+.vn-kesson3__text h3 {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.vn-kesson3__text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.vn-kesson3__text ul li {
+  margin: 0;
+  padding: 0;
+  margin-right: 40px;
+}
+
+.vn-kesson3__text ul li:last-child {
+  margin-right: 0;
+}
+
+.vn-kesson3__text ul li img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.vn-kesson3__text .video a {
+  text-decoration: none;
+  display: block;
+}
+
+.vn-kesson3__text .video img {
+  max-width: 100%;
+  display: block;
+}
+
 .vn-kesson3__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  max-width: 540px;
   margin-left: 30px;
+  max-width: 530px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.vn-kesson3__slider .vert-text {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.vn-kesson3__slider .vert-text h3 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.kesson__slider-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 80px;
+}
+
+.kesson__slider {
+  max-width: 390px;
+}
+
+.kesson__slider-slide img {
+  max-width: 100%;
 }

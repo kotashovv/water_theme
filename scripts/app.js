@@ -245,4 +245,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     })
+
+    const sliderKesson = new Swiper('.kesson__slider', {
+        slidesPerView: 1,
+        autoHeight: true,
+        spaceBetween: 15,
+        navigation: {
+            nextEl: '.kesson-next',
+            prevEl: '.kesson-prev',
+        }
+    })
 })
