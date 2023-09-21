@@ -225,4 +225,24 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.sk-prev',
         }
     })
+
+    const blockThree = new Swiper('.npblock3__slider',{
+       
+        spaceBetween: 30,
+        pagination: {
+            el: '.npblock3__pagination'
+        },
+        navigation: {
+            nextEl: '.npblock3-next',
+            prevEl: '.npblock3-prev'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            560: {
+                slidesPerView: 2,
+            }
+        }
+    })
 })
