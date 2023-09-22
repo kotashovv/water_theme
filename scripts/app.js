@@ -248,11 +248,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sliderKesson = new Swiper('.kesson__slider', {
         slidesPerView: 1,
-        autoHeight: true,
         spaceBetween: 15,
         navigation: {
             nextEl: '.kesson-next',
             prevEl: '.kesson-prev',
+        }
+    })
+
+    const sliderNewsKesson = new Swiper('.kesson4__slider', {
+        navigation: {
+            prevEl: '.kesson4__prev',
+            nextEl: '.kesson4__next'
+        },
+        spaceBetween: 30,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            560: {
+                slidesPerView: 1.5,
+            },
+            920: {
+                slidesPerView: 2.5,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
         }
     })
 })

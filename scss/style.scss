@@ -1359,7 +1359,7 @@
 /* обновление - финиш */
 
 
-// обновление сентябрь 2023
+/* обновление сентябрь */
 
 .np-hero.custom .np-hero__text span.guarant {
         bottom: 70%;
@@ -1669,6 +1669,39 @@
 		}
 }
 
+@media(max-width:1200px) {
+    .vn-kesson2 {
+        &__items {
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: calc(50% - 30px);
+            margin: 0 15px 30px;
+            &:last-child {
+                margin: 0 15px 0;
+                width: 100%;
+            }
+        }
+    }
+}
+@media(max-width:560px) {
+    .vn-kesson2 {
+        &__items {
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+        &__item {
+           margin: 0 0 30px;
+           padding: 30px 40px;
+           width: 100%;
+           &:last-child {
+            margin: 0;
+           }
+        }
+    }
+}
+
 
 .vn-kesson3 {
     box-sizing: border-box;
@@ -1682,7 +1715,7 @@
         right: 0;
         top: 0;
         height: 100%;
-        width: 30%;
+        width: 28.2%;
         background-color: #fa4951;
     }
     // .vn-kesson3__body
@@ -1748,7 +1781,9 @@
         margin-left: 30px;
         max-width: 530px;
         align-items: stretch;
-        
+        .swiper-wrapper {
+            align-items: center;
+        }
         .vert-text {
             height: 100%;
             display: flex;
@@ -1787,7 +1822,27 @@
 
     &__slider {
         max-width: 390px;
-        
+        .kesson-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                margin: 10px;
+                padding: 0;
+                img {
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+                &.kesson-next {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
     }
 
     // .kesson__slider-wrapper
@@ -1798,25 +1853,284 @@
     // .kesson__slider-slide
 
     &__slider-slide {
+        transition: .35s ease;
+        opacity: .5;
+        &.swiper-slide-active {
+            opacity: 1;
+        }
         img {
             max-width: 100%;
         }
     }
 }
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.kesson-navigation {
-}
-.kesson-prev {
-}
-.kesson-next {
-}
-.vert-text {
+
+@media(max-width:1200px) {
+    .vn-kesson3 {
+        &::before {
+            display: none;
+        }
+        &__slider {
+            display: none;
+        }
+        &__text {
+            max-width: none;
+            width: 100%;
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .kesson {
+      
+    }
 }
 
+@media(max-width:560px) {
+    .vn-kesson3 {
+        &__text {
+            h3 {
+                font-size: 24px;
+            }
+        }
+    }
+}
 
+.vn-kesson4 {
+    padding: 40px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    // .vn-kesson4__title
+
+    &__title {
+        margin-bottom: 30px;
+        h2 {
+            margin: 0;
+            display: block;
+            text-align: center;
+            color: #333;
+            font-family: $font;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+    }
+
+    // .vn-kesson4__slider-wrap
+
+    &__slider-wrap {
+        position: relative;
+    }
+
+    // .vn-kesson4__action
+
+    &__action {
+        margin-top: 45px;
+        a {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+}
+.np-container {
+}
+.kesson4 {
+    &__nav {
+        button {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            z-index: 10;
+            cursor: pointer;
+            top: 90px;
+        }
+        .kesson4__prev {
+            left: -20px;
+        }
+        .kesson4__next {
+            right: -20px;
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    // .kesson4__slider
+
+    &__slider {
+        position: relative;
+       
+    }
+
+    // .kesson4__slider-wrap
+
+    &__slider-wrap {
+    }
+
+    // .kesson4__slider-slide
+
+    &__slider-slide {
+        .img {
+            display: block;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+                object-fit: cover;
+                height: 250px;
+            }
+        }
+        .text {
+            h3 {
+                margin: 0;
+                color: #333;
+                font-family: $font;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 1.5;
+                display: block;
+                margin-bottom: 10px;
+            }
+            p {
+                display: block;
+                max-width: 390px;
+                margin: 0;
+                margin-bottom: 10px;
+                font-family: $font;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.4;
+            }
+            a {
+                display: block;
+                width: fit-content;
+                font-family: $font;
+                color: #fa4951;
+                font-weight: 700;
+                line-height: 1.5;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    
+    .kesson4 {
+        &__nav {
+            .kesson4__next {
+                right: -10px;
+            }
+            .kesson4__prev {
+                left: -10px;
+            }
+        }
+    }
+}
+@media(max-width:920px) {
+    .vn-kesson4 {
+      padding: 30px 0;  
+      &__title {
+        h2 {
+            font-size: 24px;
+        }
+      }
+    }
+}
+
+.np-faq__item.custom {
+    border: none;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    .np-faq__text {
+        margin: 0;
+        padding: 0 25px;
+        &.active {
+            padding: 0 25px 25px;
+        }
+    }
+    button.np-faq__btn {
+        padding: 25px 75px 25px 30px;
+        &::before {
+            background-color: transparent;
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            top: 15px;
+            right: 25px;
+            background-image: url(assets/imgs/faq-btn.svg);
+            object-fit: contain;
+            background-size: cover;
+        }
+        &::after {
+            display: none;
+        }
+        &.active {
+            &::before {
+                background-image: url(assets/imgs/faq-btn-close.svg);
+            }
+            border-bottom: none;
+        }
+        p {
+            font-size: 22px;
+            color: #333;
+            line-height: 1.2;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+}
+
+@media(max-width:560px) {
+    .np-faq__item.custom {
+        .np-faq__text {
+            padding: 0 20px;
+            p {
+
+            }
+            &.active {
+                padding: 0 20px 20px;
+            }
+        }
+        button.np-faq__btn {
+            padding: 20px 40px 20px 20px;
+            &::before {
+                width: 40px;
+                height: 40px;
+                top: 10px;
+                right: 20px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.2;
+            }
+            &::before {
+            }
+            &::after {
+            }
+            &.active {
+                &::before {
+                }
+            }
+            p {
+                
+            }
+        }
+    }
+}
+
+.np-nott {
+    padding: 0;
+    &.custom {
+        background-color: #f1f1f1;
+        .np-nott__item {
+            background-color: transparent;
+        }
+    }
+    
+}
 // обновление сентябрь 2023
